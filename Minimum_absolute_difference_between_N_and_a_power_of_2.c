@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int a,b,i,min,max,gp,lp;
+    scanf("%d",&a);
+    for(i=1;i<=a;i++)
+    {
+        b=pow(2,i);
+        if(b<a)
+        {
+            min=b;
+        }
+        else
+        {
+            max=b;
+            break;
+        }
+    }
+    gp=a-min;
+    lp=max-a;
+    if(gp>lp)
+    {
+        printf("%d",lp);
+    }
+    else
+    {
+        printf("%d",gp);
+    }
+}
