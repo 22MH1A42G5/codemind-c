@@ -1,0 +1,49 @@
+#include<stdio.h>
+int main()
+{
+    int a,i,j,c=0,gp,lp,s=0,gpd,lpd;
+    scanf("%d",&a);
+    for(i=a;;i++)
+    {
+        c=0;
+        for(j=1;j<=i;j++)
+        {
+            if(i%j==0)
+            {
+                c++;
+            }
+        }
+        if(c==2)
+        {
+            gp=i;
+            break;
+        }
+    }
+    for(i=a;;i--)
+    {
+        s=0;
+        for(j=1;j<=i;j++)
+        {
+            if(i%j==0)
+            {
+                s++;
+            }
+        }
+        if(s==2)
+        {
+            lp=i;
+            break;
+        }
+    }
+    gpd=gp-a;
+    lpd=a-lp;
+    if(gpd>lpd)
+    {
+        
+        printf("%d",lpd);
+    }
+    else
+    {
+        printf("%d",gpd);
+    }
+}
