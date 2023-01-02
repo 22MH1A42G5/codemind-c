@@ -1,0 +1,52 @@
+#include<stdio.h>
+int main()
+{
+    int a,b,c,d,i,r=0,gp,lp,ap,bp,s=0,e,f;
+    scanf("%d",&a);
+    for(i=a+1;;i++)
+    {
+        d=i;
+        r=0;
+        while(d!=0)
+        {
+            b=d%10;
+            r=r*10+b;
+            d=d/10;
+        }
+        if(i==r)
+        {
+            gp=i;
+            break;
+        }
+    }
+    for(i=a-1;;i--)
+    {
+        e=i;
+        s=0;
+        while(e!=0)
+        {
+            f=e%10;
+            s=s*10+f;
+            e=e/10;
+        }
+        if(i==s)
+        {
+            lp=i;
+            break;
+        }
+    }
+    ap=gp-a;
+    bp=a-lp;
+    if(ap==bp)
+    {
+        printf("%d %d",lp,gp);
+    }
+    else if(ap>bp)
+    {
+        printf("%d",lp);
+    }
+    else
+    {
+        printf("%d",gp);
+    }
+}
