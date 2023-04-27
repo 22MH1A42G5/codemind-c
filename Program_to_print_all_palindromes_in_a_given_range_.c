@@ -1,25 +1,28 @@
 #include<stdio.h>
-int reverse(int t)
+int palind(int a)
 {
-    int rem,rev=0;
-    while(t>0)
+    int n,rev=0,rem;
+    n=a;
+    while(a>0)
     {
-        rem=t%10;
+        rem=a%10;
         rev=rev*10+rem;
-        t=t/10;
+        a=a/10;
     }
-    return rev;
+    if(n==rev)
+    return 1;
+    else
+    return 0;
 }
 int main()
 {
-    int m,n,rev,i;
-    scanf("%d%d",&m,&n);
-    for(i=m;i<=n;i++)
+    int a,b,i;
+    scanf("%d%d",&a,&b);
+    for(i=a;i<b;i++)
     {
-        rev=reverse(i);
-        if(rev==i)
+        if(palind(i)==1)
         {
-            printf("%d ",i);
+        printf("%d ",i);
         }
     }
 }
