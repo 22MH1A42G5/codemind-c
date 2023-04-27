@@ -1,18 +1,26 @@
 #include<stdio.h>
+#include<math.h>
 int main()
 {
-    int n,i,c;
-    scanf("%d",&n);
-    for(i=1;i<=n;i++)
+    int a,c,i,j;
+    scanf("%d",&a);
+    int n;
+    n=a/3;
+    for(i=0;i<=n;i++)
     {
-        if(i*i==n){
-            printf("True");
+        for(j=0;j<=n;j++)
+        {
+            if(i*i+j*j==a)
+            {
             c=1;
             break;
+            }
         }
+        if(c==1)
+        break;
     }
-    if(c!=1)
-    {
-        printf("False");
-    }
+    if(c==1)
+    printf("True");
+    else
+    printf("False");
 }
