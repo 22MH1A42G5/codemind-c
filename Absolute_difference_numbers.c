@@ -1,13 +1,32 @@
 #include<stdio.h>
-#include<math.h>
 int main()
 {
-    int a,b,c,n,k,f,l;
-    scanf("%d%d",&n,&a);
-     b=pow((10),a);
-     c=log10(n);
-         k=pow((10),c-a+1);
-         f=n/k;
-         l=n%b;
-         printf("%d",abs(f-l));
+    int n,i,dig=0,te,po=1,ls,fs,j,tem;
+    scanf("%d%d",&n,&i);
+    tem=n;
+    while(tem)
+    {
+        dig++;
+        tem=tem/10;
+    }
+    //printf("%d",dig);
+    te=i;
+    while(te--)
+    {
+		po=po*10;
+	}
+	ls=n%po;
+	//printf("%d",ls);
+	j=dig-i;
+	po=1;
+	while(j--)
+	{
+	    po=po*10;
+	}
+	//printf("%d",po);
+	fs=n/po;
+	if(fs>ls)
+	printf("%d",fs-ls);
+	else
+	printf("%d",ls-fs);
 }
