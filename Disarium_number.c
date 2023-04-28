@@ -2,29 +2,29 @@
 #include<math.h>
 int main()
 {
-    int a,b,c,d,r=0,i=0,s,f=0;
-    scanf("%d",&a);
-    s=a;
-    while(a!=0)
-    {
-        b=a%10;
-        r=r*10+b;
-        a=a/10;
-    }
-    while(r!=0)
-    {
-        c=r%10;
-        i++;
-        d=pow(c,i);
-        r=r/10;
-        f=f+d;
-    }
-    if(s==f)
-    {
-        printf("True");
-    }
-    else
-    {
-        printf("False");
-    }
+	int a,i,sum=0,dig=0,n,rem,j,po=1,te,temp;
+	scanf("%d",&a);
+	n=a;
+	temp=a;
+	while(a){
+		dig++;
+		a=a/10;
+	}
+	i=dig;
+	while(n>0){
+		rem=n%10;
+		te=i;
+		po=1;
+		while(te--){
+			po=po*rem;
+			
+		}
+		sum=sum+po;
+		i--;
+		n=n/10;
+	}
+	if(temp==sum)
+	printf("True");
+	else
+	printf("False");
 }
