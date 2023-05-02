@@ -1,29 +1,30 @@
 #include<stdio.h>
 int main()
 {
-    int a,b,c,i,n,d=0,s=0;
+    int a,b,i,c=0,d=0,rem,t;
     scanf("%d%d",&a,&b);
-    for(i=a;i<=b;i++)
-    {
-        s=0;
+    for(i=a;i<=b;i++){
+        t=i;
         d=0;
-        n=i;
-        while(n!=0)
+        c=0;
+        if(i%10==0)
+        continue;
+        
+        while(t>0)
         {
-            c=n%10;
-            d++;
-             if(c!=0)
-            {
-            if(i%c==0)
-            {
-                s++;
+            rem=t%10;
+            
+            if(i%rem==0){
+                d++;
             }
-            }
-            n=n/10;
+            c++;
+            t=t/10;
         }
-        if(s==d)
+        //printf("%d %d %d
+",i,c,d);
+        if(c==d)
         {
-        printf("%d ",i);
+            printf("%d ",i);
         }
-   }
+    }
 }
