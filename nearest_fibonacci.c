@@ -1,35 +1,31 @@
 #include<stdio.h>
 int main()
 {
-    int a=0,b=1,c,d,e,min,max,n,i;
+    int a=0,b=1,n,sm,lg,smc,lgc,i=0,c=0;
     scanf("%d",&n);
-    for(i=1;i<=n;i++)
+    while(1)
     {
+    	i++;
+    	
+        if(a<n){
+        	sm=a;
+        	
+		}
+		if(a>n){
+			lg=a;
+			
+			break;
+		}
         c=a+b;
         a=b;
         b=c;
-        if(c<n)
-        {
-            min=c;
-        }
-        else
-        {
-            max=c;
-            break;
-        }
     }
-    d=n-min;
-    e=max-n;
-    if(d==e)
-    {
-        printf("%d %d",min,max);
+    if((n-sm)==(lg-n)){
+        printf("%d %d",sm,lg);
     }
-    else if(d>e)
-    {
-        printf("%d",max);
-    }
-    else
-    {
-        printf("%d",min);
-    }
+    else if(n-sm>lg-n){
+    	printf("%d",lg);
+	}
+	else
+	printf("%d",sm);
 }
