@@ -1,9 +1,9 @@
 #include<stdio.h>
 int main()
 {
-    int a;
-    scanf("%d",&a);
-    if(a==1 || a==2 || a==3 || a==4 || a==5 || a==6 || a==8 || a==9 || a==10 || a==12 || a==15)
+    int n; 
+    scanf("%d",&n);
+    if(n==1 || n==2 || n==3 || n==4 || n==5 || n==6 || n==8 || n==9 || n==10 || n==12 || n==15)
     printf("Ugly Number");
     else
     printf("Not Ugly Number");
