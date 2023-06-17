@@ -1,21 +1,23 @@
 #include<stdio.h>
+int palind(int a){
+    int r,rev=0,t;
+    t=a;
+    while(t){
+        r=t%10;
+        rev=rev*10+r;
+        t=t/10;
+    }
+    if(rev==a)
+    return 1;
+    else
+    return 0;
+}
 int main()
 {
-    int i,a,b,c,r=0;
-    scanf("%d",&a);
-    c=a;
-    while(a!=0)
-    {
-        b=a%10;
-        r=r*10+b;
-        a=a/10;
-    }
-    if(c==r)
-    {
-        printf("True");
-    }
+    int n;
+    scanf("%d",&n);
+    if(palind(n))
+    printf("True");
     else
-    {
-        printf("False");
-    }
+    printf("False");
 }
